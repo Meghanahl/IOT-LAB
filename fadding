@@ -1,20 +1,18 @@
-int ledPin=9;
-void setup() {
-  // put your setup code here, to run once:
+void setup() 
+{
 
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  for(int fadevalue=0;fadevalue<=255;fadevalue+=5)
+void loop() 
+{
+  for(int i=0;i<=255;i+=5)
   {
-    analogWrite(ledPin,fadevalue);
-    delay(3000);
+    analogWrite(9,i);
+    delay(30);  
   }
-  for(int fadevalue=255;fadevalue>0;fadevalue+=5)
+  for(int i=255;i>=0;i+=5)
   {
-    analogWrite(ledPin,fadevalue);
-    delay(3000);
+    analogWrite(9,i);
+    delay(30);  
   }
-
 }
